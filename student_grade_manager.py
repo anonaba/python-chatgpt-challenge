@@ -78,13 +78,16 @@ def find_top_student(averages: dict) -> str:
     return f"\nTop student: {top_student}"
 
 
-averages = calculate_average({"X": [60, 70, 80]})
-top_student = find_top_student(averages)
+def print_me():
+    averages = calculate_average({"X": [60, 70, 80]})
+    top_student = find_top_student(averages)
+
+    print("Averages:")
+    for name, average in averages.items():
+        print(f"{name}: {average}")
+
+    print(top_student)
 
 
-print("Averages:")
-for name, average in averages.items():
-    print(f"{name}: {average}")
-
-print(top_student)
+print_me()
 
