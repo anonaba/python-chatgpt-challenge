@@ -1,3 +1,4 @@
+# import string
 def words_count(words: str) -> dict[str, int]: # is not necessary to add a [] in dict
     words = words.lower()
 
@@ -7,6 +8,7 @@ def words_count(words: str) -> dict[str, int]: # is not necessary to add a [] in
 
     # Remove Special Char
     clear_text = "".join(char for char in words if char not in special_char).split()
+    # clear_text = "".join(char for char in words if char not in string.punctuation).split()
 
     # for char in words:
     #     if char not in special_char:
