@@ -1,3 +1,5 @@
+# Challenge: Word Frequency Counter
+
 # import string
 def words_count(words: str) -> dict[str, int]: # is not necessary to add a [] in dict
     words = words.lower()
