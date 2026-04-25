@@ -53,9 +53,20 @@ print(calculate_average(students))
 
 ############################## REFACTOR ##############################
 
+""" 
+The core idea
+
+A function should:
+
+Do one thing
+Do it well
+Not mix responsibilities
+"""
+
 students = {"Alice": [85, 90, 88], "Bob": [70, 75, 80], "Charlie": [95, 92, 93]}
 
 
+# this function focus only in one thing is to calculate the average of each students
 def calculate_average(students: dict) -> dict:
 
     averages = {}
@@ -65,7 +76,7 @@ def calculate_average(students: dict) -> dict:
 
     return averages
 
-
+# this function determines who is the highest_average students
 def find_top_student(averages: dict) -> str:
     top_student = None
     highest_average = 0
@@ -79,7 +90,7 @@ def find_top_student(averages: dict) -> str:
 
 
 def print_me():
-    averages = calculate_average({"X": [60, 70, 80]})
+    averages = calculate_average(students)
     top_student = find_top_student(averages)
 
     print("Averages:")
