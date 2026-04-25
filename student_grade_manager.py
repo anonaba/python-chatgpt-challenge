@@ -50,3 +50,41 @@ def find_top_student(data: dict):
 
 
 print(calculate_average(students))
+
+############################## REFACTOR ##############################
+
+students = {"Alice": [85, 90, 88], "Bob": [70, 75, 80], "Charlie": [95, 92, 93]}
+
+
+def calculate_average(students: dict) -> dict:
+
+    averages = {}
+    for name, average in students.items():
+        total_average = sum(average) / len(average)
+        averages[name] = round(total_average, 2)
+
+    return averages
+
+
+def find_top_student(averages: dict) -> str:
+    top_student = None
+    highest_average = 0
+
+    for name, average in averages.items():
+        if average > highest_average:
+            highest_average = average
+            top_student = name
+
+    return f"\nTop student: {top_student}"
+
+
+averages = calculate_average({"X": [60, 70, 80]})
+top_student = find_top_student(averages)
+
+
+print("Averages:")
+for name, average in averages.items():
+    print(f"{name}: {average}")
+
+print(top_student)
+
