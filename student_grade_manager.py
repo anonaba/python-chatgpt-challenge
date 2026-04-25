@@ -18,6 +18,7 @@ Charlie: 93.33
 Top student: Charlie
 """
 
+students = {"Alice": [85, 90, 88], "Bob": [70, 75, 80], "Charlie": [95, 92, 93]}
 
 def calculate_average(scores: dict):
 
@@ -46,6 +47,6 @@ def find_top_student(data: dict):
     print(f"\nTop student: {top_student}")
 
 
-students = {"X": [60, 70, 80]}
+
 
 print(calculate_average(students))
