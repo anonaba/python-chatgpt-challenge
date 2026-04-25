@@ -27,7 +27,7 @@ def calculate_average(scores: dict):
     for name, score in scores.items():
         averages[name] = float(f"{sum(score) / len(score):.2f}")
 
-    return averages
+    find_top_student(averages)
 
 
 def find_top_student(data: dict):
