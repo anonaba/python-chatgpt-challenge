@@ -15,3 +15,17 @@ def non_repeating_char(word: str) -> str | None:
 
 
 print(non_repeating_char("stress"))
+
+
+############################## REFACTOR ##############################
+
+def non_repeating_char(word: str) -> str | None:
+    word = word.lower()
+
+    count = {char: word.count(char) for char in word}
+
+    return next((char for char in word if count[char] == 1), None)
+
+
+print(non_repeating_char("aA"))
+
