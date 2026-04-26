@@ -88,7 +88,7 @@ def find_top_student(averages: dict) -> str:
 
     return f"\nTop student: {top_student}"
 
-
+# Function responsible printing the result to the console
 def print_me():
     averages = calculate_average(students)
     top_student = find_top_student(averages)
