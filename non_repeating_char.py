@@ -27,5 +27,5 @@ def non_repeating_char(word: str) -> str | None:
     return next((char for char in word if count[char] == 1), None)
 
 
-print(non_repeating_char("aA"))
+print(non_repeating_char("stress"))
 
