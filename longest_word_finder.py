@@ -28,11 +28,7 @@ import string
 
 def find_longest_word(sentence: str) -> str | None:
 
-    return max(
-        (word.strip(string.punctuation) for word in sentence.split()),
-        key=len,
-        default=None,
-    )
+    return max((word.strip(string.punctuation) for word in sentence.split()),key=len,default=None)
 
 
 print(find_longest_word("Python is awesome!@"))
