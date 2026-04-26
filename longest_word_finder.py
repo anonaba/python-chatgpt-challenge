@@ -7,7 +7,7 @@ def find_longest_word(sentence: str) -> str | None:
     longest_word = ""
 
     # Remove special charater from the input
-    for word in sentence.lower():
+    for char in sentence.lower():
         if word not in string.punctuation:
             clean_sentence += word
             
