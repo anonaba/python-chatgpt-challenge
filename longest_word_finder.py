@@ -8,8 +8,8 @@ def find_longest_word(sentence: str) -> str | None:
 
     # Remove special charater from the input
     for char in sentence.lower():
-        if word not in string.punctuation:
-            clean_sentence += word
+        if char not in string.punctuation:
+            clean_sentence += char
             
     # save the longest word in the longest_word vairable
     for word in clean_sentence.split():
