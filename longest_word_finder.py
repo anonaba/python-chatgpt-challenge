@@ -18,11 +18,21 @@ def find_longest_word(sentence: str) -> str | None:
 
     return longest_word
 
+print(find_longest_word("Python is awesome!@"))
+
 
 ############################## REFACTOR ##############################
 
+import string
+
+
 def find_longest_word(sentence: str) -> str | None:
-    return max([word for word in sentence.split()], key=len, default=None)
+
+    return max(
+        (word.strip(string.punctuation) for word in sentence.split()),
+        key=len,
+        default=None,
+    )
 
 
-print(find_longest_word("Python is awesome"))
+print(find_longest_word("Python is awesome!@"))
